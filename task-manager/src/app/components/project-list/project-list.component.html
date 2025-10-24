@@ -1,0 +1,18 @@
+<div class="project-list">
+  <h2>Projects</h2>
+
+  <form (ngSubmit)="addProject()">
+    <input [(ngModel)]="newProject.name" name="name" placeholder="Project Name" required>
+    <input [(ngModel)]="newProject.description" name="description" placeholder="Description">
+    <button type="submit">Add Project</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let project of projects">
+      <strong>{{ project.name }}</strong> - {{ project.description }}
+      <button (click)="viewProject(project.id)">View</button>
+      <button (click)="editProject(project)">Edit</button>
+      <button (click)="deleteProject(project.id)">Delete</button>
+    </li>
+  </ul>
+</div>

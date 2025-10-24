@@ -1,0 +1,27 @@
+<div class="project-detail">
+  <h2>Project Tasks</h2>
+
+  <form (ngSubmit)="addTask()">
+    <input [(ngModel)]="newTask.title" name="title" placeholder="Task Title" required>
+    <input [(ngModel)]="newTask.description" name="description" placeholder="Description">
+    <input type="date" [(ngModel)]="newTask.dueDate" name="dueDate">
+    <select [(ngModel)]="newTask.priority" name="priority">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+    </select>
+    <select [(ngModel)]="newTask.status" name="status">
+      <option>Not Started</option>
+      <option>In Progress</option>
+      <option>Completed</option>
+    </select>
+    <button type="submit">Add Task</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let task of tasks">
+      <strong>{{ task.title }}</strong> - {{ task.priority }} - {{ task.status }}
+      <button (click)="deleteTask(task.id)">Delete</button>
+    </li>
+  </ul>
+</div>

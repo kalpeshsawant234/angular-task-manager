@@ -1,0 +1,76 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "name": "Website Redesign",
+      "description": "Revamp the company website with modern UI/UX"
+    },
+    {
+      "id": "2",
+      "name": "Mobile App Development",
+      "description": "Develop a cross-platform mobile app"
+    },
+    {
+      "id": "1761133807113",
+      "name": "E-Commerce",
+      "description": "Shopping website"
+    },
+    {
+      "id": 0,
+      "name": "kjedfgwehjkfgjkwhgw",
+      "description": "dsafbehjkfgbjkewfgkwebg"
+    },
+    {
+      "id": 0,
+      "name": "dfkjhjkdghdsjkhgkshgjhb",
+      "description": "sagfagfjkajkfbajksfb"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "101",
+      "title": "Design homepage layout",
+      "description": "Create responsive layout for homepage",
+      "dueDate": "2025-10-30",
+      "priority": "High",
+      "status": "In Progress",
+      "projectId": 1
+    },
+    {
+      "id": "102",
+      "title": "Implement API integration",
+      "description": "Connect frontend with backend API",
+      "dueDate": "2025-11-02",
+      "priority": "Medium",
+      "status": "Not Started",
+      "projectId": 1
+    },
+    {
+      "id": "103",
+      "title": "UI Testing",
+      "description": "Verify UI across browsers and devices",
+      "dueDate": "2025-11-10",
+      "priority": "Low",
+      "status": "Not Started",
+      "projectId": 2
+    },
+    {
+      "id": "105",
+      "title": "Build chart components",
+      "description": "Use Chart.js for analytics data visualization",
+      "dueDate": "2025-10-31",
+      "priority": "Medium",
+      "status": "Completed",
+      "projectId": 3
+    },
+    {
+      "id": "0",
+      "title": "Styling ",
+      "description": "Add styles ",
+      "dueDate": "2025-10-30",
+      "priority": "Low",
+      "status": "In Progress",
+      "projectId": 1
+    }
+  ]
+}
