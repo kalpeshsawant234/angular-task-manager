@@ -7,7 +7,7 @@ import { Project, Task } from '../models/models';
   providedIn: 'root'
 })
 export class DataService {
-  private baseUrl = 'http://localhost:3000'; 
+  private baseUrl = 'https://task-manager-kvsn5tire-kalpesh-sawants-projects.vercel.app/api/tasks'; 
 
   constructor(private http: HttpClient) {}
 

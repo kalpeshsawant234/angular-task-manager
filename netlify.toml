@@ -1,7 +1,0 @@
-[build]
-    publish = "dist/task-manager"
-
-    [[redirect]]
-    from = "/*"
-    to = "/index.html"
-    status = 200
