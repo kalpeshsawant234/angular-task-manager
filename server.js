@@ -23,5 +23,5 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/angular-task-manager/index.html'));
 });
 
-const port = process.env.PORT || 8080;
-app.listen(port, () => console.log(`Server running on port ${port}`));
+// ✅ Export the app for Vercel
+module.exports = app;
