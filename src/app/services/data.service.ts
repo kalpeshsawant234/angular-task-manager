@@ -7,7 +7,7 @@ import { Project, Task } from '../models/models';
   providedIn: 'root'
 })
 export class DataService {
-  private baseUrl = 'https://angular-task-manager-six.vercel.app/api'; 
+  private baseUrl = 'https://angular-task-manager.vercel.app/api'; 
 
   constructor(private http: HttpClient) {}
 
