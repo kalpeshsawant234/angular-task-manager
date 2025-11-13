@@ -16,11 +16,11 @@ app.use((req, res, next) => {
 app.use('/api', middlewares, router);
 
 // Serve Angular static files
-app.use(express.static(path.join(__dirname, 'dist/task-manager')));
+app.use(express.static(path.join(__dirname, 'dist/angular-task-manager')));
 
 // Angular routing fallback
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/task-manager/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/angular-task-manager/index.html'));
 });
 
 const port = process.env.PORT || 8080;
