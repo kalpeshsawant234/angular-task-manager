@@ -1,0 +1,51 @@
+<div class="task-list-container">
+  <div class="header">
+    <h1>Task Manager</h1>
+    <button class="btn btn-add" (click)="onAddTask()">+ Add New Task</button>
+  </div>
+
+  <app-task-form 
+    *ngIf="showForm"
+    [task]="selectedTask"
+    (submitTask)="onSubmitTask($event)"
+    (cancel)="onCancelForm()">
+  </app-task-form>
+
+  <div class="filters">
+    <div class="search-box">
+      <input type="text" placeholder="Search tasks..." (input)="onSearchChange($event)">
+    </div>
+    <div class="status-filters">
+      <button [class.active]="filterStatus === 'all'" (click)="onFilterChange('all')">All</button>
+      <button [class.active]="filterStatus === 'pending'" (click)="onFilterChange('pending')">Pending</button>
+      <button [class.active]="filterStatus === 'in-progress'" (click)="onFilterChange('in-progress')">In Progress</button>
+      <button [class.active]="filterStatus === 'completed'" (click)="onFilterChange('completed')">Completed</button>
+    </div>
+  </div>
+
+  <div class="tasks-grid">
+    <div class="task-card" *ngFor="let task of filteredTasks">
+      <div class="task-header">
+        <h3>{{ task.title }}</h3>
+        <span class="priority-badge" [ngClass]="getPriorityClass(task.priority)">
+          {{ task.priority }}
+        </span>
+      </div>
+      <p class="task-description">{{ task.description }}</p>
+      <div class="task-meta">
+        <span class="status-badge" [ngClass]="getStatusClass(task.status)">
+          {{ task.status }}
+        </span>
+        <span class="due-date">Due: {{ task.dueDate }}</span>
+      </div>
+      <div class="task-actions">
+        <button class="btn-edit" (click)="onEditTask(task)">Edit</button>
+        <button class="btn-delete" (click)="onDeleteTask(task.id!)">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="empty-state" *ngIf="filteredTasks.length === 0">
+    <p>No tasks found. Add a new task to get started!</p>
+  </div>
+</div>
