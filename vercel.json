@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/task-manager",
+  "rewrites": [
+    {
+      "source": "/api/tasks/:id",
+      "destination": "/api/tasks"
+    },
+    {
+      "source": "/api/tasks",
+      "destination": "/api/tasks"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

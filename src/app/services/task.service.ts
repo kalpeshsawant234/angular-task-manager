@@ -7,7 +7,10 @@ import { Task } from '../model/task.model';
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'http://localhost:3000/tasks';
+  // Automatically use correct API URL
+  private apiUrl = window.location.hostname === 'localhost' 
+    ? 'http://localhost:3000/tasks'
+    : '/api/tasks';
 
   constructor(private http: HttpClient) { }
 
