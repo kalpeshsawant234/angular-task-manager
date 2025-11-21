@@ -58,7 +58,7 @@ h1 {
 }
 
 .status-filters button {
-  padding: 8px 16px;
+  padding: 8px 10px;
   border: 1px solid #ddd;
   background: white;
   border-radius: 4px;
@@ -216,7 +216,7 @@ h1 {
   color: #757575;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 76px) {
   .tasks-grid {
     grid-template-columns: 1fr;
   }
