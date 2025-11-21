@@ -92,7 +92,7 @@ h2 {
   background-color: #616161;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .form-row {
     grid-template-columns: 1fr;
   }
